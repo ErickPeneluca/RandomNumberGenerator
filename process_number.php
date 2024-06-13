@@ -9,15 +9,13 @@ $arr = [];
 
 for ($i=0; $i < $numero; $i++) { 
     $arr[$i] = rand(0, 9);
+}
 
-    if ($i > 0) {
-        if ($arr[$i] == $arr[$i - 1]) {
-            while ($arr[$i] == $arr[$i - 1]) { 
-                $arr[$i] = rand(0, 9);
-            }
+$arr = array_unique($arr);
 
-        }
-    }
+while (count($arr) < $numero) {
+    $arr[] = rand(0,9);
+    $arr = array_unique($arr);
 }
 
 foreach ($arr as $x) {
