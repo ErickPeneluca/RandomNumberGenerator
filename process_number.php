@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <?php
 
 $numero = $_POST['range_number'];
@@ -18,8 +21,12 @@ while (count($arr) < $numero) {
     $arr = array_unique($arr);
 }
 
-foreach ($arr as $x) {
-    echo "$x";
-}
-
 ?>
+
+<p>
+    <?php
+        foreach ($arr as $x) {
+            echo "$x";
+        }
+    ?>
+</p>
